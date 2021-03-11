@@ -98,14 +98,16 @@ namespace ASPCoreIdentity
             }).AddXmlSerializerFormatters();
 
 
+            var sec = Configuration.GetSection("Tokens").GetSection("GoogleClientId").Value;
+
             services.AddAuthentication().AddGoogle(options =>
             {
-                options.ClientId = "249786663302-19fb24dljjjdtgc10ologsvntdbahh59.apps.googleusercontent.com";
-                options.ClientSecret = "KGpboy74EAWqHku51CSASo11";
-            }).AddFacebook(options =>
+                options.ClientId = Configuration.GetSection("Tokens").GetSection("GoogleClientId").Value; 
+                 options.ClientSecret = Configuration.GetSection("Tokens").GetSection("GoogleClientSecret").Value;
+             }).AddFacebook(options =>
             {
-                options.AppId = "1081936768949889";
-                options.AppSecret = "fea7339c0d043554ba3f1101177c2a0e";
+                options.AppId = Configuration.GetSection("Tokens").GetSection("FaceBookAppId").Value;
+                options.AppSecret = Configuration.GetSection("Tokens").GetSection("FaceBookClientSecret").Value;
             });
 
 

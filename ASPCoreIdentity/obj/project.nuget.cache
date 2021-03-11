@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iKqRJf3ioTJqeH1SgKpVUyENUy8ZMs73RRVqabEBd4YntEsMhhTsyNcYH0O3CuxGcXfr3tplf8LYJbx/2/v//w==",
+  "dgSpecHash": "X5zAScv1MWZWjoVHz+SUsVHveP5dcaFu7I0jegctHj6QAiUq2u1Gp8Nm5m/aelGaCBxEbZEVqK4OMhA9d9qsiQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Shashank-PC\\Source\\Repos\\ASPCoreIdentity\\ASPCoreIdentity.csproj",
+  "projectFilePath": "E:\\Projects\\ASPCoreIdentity\\ASPCoreIdentity\\ASPCoreIdentity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Shashank-PC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Shashank-PC\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\3.1.11\\microsoft.aspnetcore.authentication.facebook.3.1.11.nupkg.sha512",
