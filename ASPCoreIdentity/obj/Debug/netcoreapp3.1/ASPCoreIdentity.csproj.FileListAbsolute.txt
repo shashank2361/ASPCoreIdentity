@@ -911,3 +911,5 @@ E:\Projects\ASPCoreIdentity\ASPCoreIdentity\obj\Debug\netcoreapp3.1\ASPCoreIdent
 E:\Projects\ASPCoreIdentity\ASPCoreIdentity\obj\Debug\netcoreapp3.1\ASPCoreIdentity.dll
 E:\Projects\ASPCoreIdentity\ASPCoreIdentity\obj\Debug\netcoreapp3.1\ASPCoreIdentity.pdb
 E:\Projects\ASPCoreIdentity\ASPCoreIdentity\obj\Debug\netcoreapp3.1\ASPCoreIdentity.genruntimeconfig.cache
+E:\Projects\ASPCoreIdentity\ASPCoreIdentity\obj\Debug\netcoreapp3.1\ASPCoreIdentity.csprojAssemblyReference.cache
+E:\Projects\ASPCoreIdentity\ASPCoreIdentity\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccountLocked.cshtml.g.cs

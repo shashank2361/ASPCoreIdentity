@@ -85,7 +85,7 @@ namespace ASPCoreIdentity.Controllers
 
 
                 var result = await signInManager.PasswordSignInAsync(
-                    model.Email, model.Password, model.RememberMe, false);
+                    model.Email, model.Password, model.RememberMe, true);
 
                 if (result.Succeeded)
                 {
@@ -100,7 +100,10 @@ namespace ASPCoreIdentity.Controllers
                     }
                     
                 }
-
+                if (result.IsLockedOut)
+                {
+                    return View("AccountLocked");
+                }
                 ModelState.AddModelError(string.Empty, "Invalid Login Attempt");
             }
 
@@ -420,6 +423,14 @@ namespace ASPCoreIdentity.Controllers
                     var result = await userManager.ResetPasswordAsync(user, model.Token, model.Password);
                     if (result.Succeeded)
                     {
+                        // Upon successful password reset and if the account is lockedout, set
+                        // the account lockout end date to current UTC date time, so the user
+                        // can login with the new password
+                        if (await userManager.IsLockedOutAsync(user))
+                        {
+                            await userManager.SetLockoutEndDateAsync(user, DateTimeOffset.UtcNow);
+                        }
+
                         return View("ResetPasswordConfirmation");
                     }
                     // Display validation errors. For example, password reset token already

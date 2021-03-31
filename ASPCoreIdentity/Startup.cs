@@ -72,6 +72,10 @@ namespace ASPCoreIdentity
                     options.Password.RequiredLength = 5;
                     options.Password.RequiredUniqueChars = 1;
                     options.SignIn.RequireConfirmedEmail = true;  // for email confirmation
+
+                    options.Lockout.MaxFailedAccessAttempts = 3;
+                    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+
                 })
                 .AddEntityFrameworkStores<CompanyDBContext>()
                 .AddDefaultTokenProviders().
